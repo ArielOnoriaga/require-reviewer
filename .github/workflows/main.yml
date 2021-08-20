@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Hello world action step
+      - name: 'Checking files'
         uses: ./
         with:
           files: 'this is a test'

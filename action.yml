@@ -1,6 +1,6 @@
 name: 'Require reviewer'
 description: 'Require reviewer when specific files are modified'
-autor: 'Ariel Onoriaga'
+author: 'Ariel Onoriaga'
 
 inputs:
   files:
