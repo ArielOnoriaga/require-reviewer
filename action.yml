@@ -1,13 +1,12 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Require reviewer'
+description: 'Require reviewer when specific files are modified'
+autor: 'Ariel Onoriaga'
+
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  files:
+    description: 'paths of files to eval'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+
 runs:
   using: 'node12'
   main: 'dist/index.js'

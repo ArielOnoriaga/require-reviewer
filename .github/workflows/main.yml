@@ -1,19 +1,13 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  reviewer_required:
     runs-on: ubuntu-latest
-    name: My first own action to say hello
+    name: Check if reviewer are required
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
-        id: hello
+        uses: ./
         with:
-          who-to-greet: 'Rupesh Tiwari'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was $"
+          files: 'this is a test'
