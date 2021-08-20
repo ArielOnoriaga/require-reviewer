@@ -6,6 +6,11 @@ inputs:
   files:
     description: 'paths of files to eval'
     required: true
+  reviewers:
+    description: 'required reviewers (github username)'
+    required: true
+  modified-files:
+    required: true
 
 runs:
   using: 'node12'

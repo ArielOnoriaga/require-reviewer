@@ -14,7 +14,15 @@ jobs:
         with:
           command: build
 
+      - id: files
+        name: 'Getting modifed files...'
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'json'
+
       - name: 'Checking files'
         uses: ./
         with:
           files: '[ "./test" ]'
+          modified-files: {{ steps.files.outputs.removed }}
+          reviewers: '[ "arielonoriaga" ]'

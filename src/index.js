@@ -2,9 +2,12 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
-  const filePaths = JSON.parse(core.getInput('files'));
+  const modifiedFiles = JSON.parse(core.getInput('modified-files', { required: true }));
 
-  console.log(typeof filePaths);
+  const filePaths = JSON.parse(core.getInput('files', { required: true }));
+  const reviewers = JSON.parse(core.getInput('reviewers', { required: true }));
+
+  console.log(filePaths);
 } catch (error) {
   core.setFailed(error.message);
 }
