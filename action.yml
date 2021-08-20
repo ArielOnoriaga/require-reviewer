@@ -4,7 +4,7 @@ author: 'Ariel Onoriaga'
 
 inputs:
   FILES:
-    description: 'filepaths'
+    description: 'Files path'
     required: true
 
 runs:
