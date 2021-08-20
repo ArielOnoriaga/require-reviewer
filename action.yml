@@ -6,6 +6,7 @@ inputs:
   FILES:
     description: 'Files path'
     required: true
+    default: 'File/file.txt'
 
 runs:
   using: 'node12'
