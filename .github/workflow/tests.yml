@@ -1,12 +1,19 @@
-name: 'tests'
-
-on:
-  pull_request:
-    types: [opened]
+on: [push]
 
 jobs:
-  test:
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: My first own action to say hello
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
+        id: hello
+        with:
+          who-to-greet: 'Rupesh Tiwari'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was $"

@@ -1,13 +1,13 @@
-name: 'Require Reviewer'
-description: 'Require reviewer if any specific file is modified'
-author: 'Ariel Onoriaga'
-
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
-  FILES:
-    description: 'Files path'
+  who-to-greet:  # id of input
+    description: 'Who to greet'
     required: true
-    default: 'File/file.txt'
-
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
   using: 'node12'
   main: 'dist/index.js'
