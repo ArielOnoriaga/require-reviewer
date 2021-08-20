@@ -1,0 +1,12 @@
+name: 'Require Reviewer'
+description: 'Require reviewer if any specific file is modified'
+author: 'Ariel Onoriaga'
+
+inputs:
+  FILES:
+    description: 'filepaths'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
