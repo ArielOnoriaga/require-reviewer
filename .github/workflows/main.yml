@@ -17,5 +17,4 @@ jobs:
       - name: 'Checking files'
         uses: ./
         with:
-          files: 'test'
-          files: 'test2'
+          files: '[ "./test" ]'
