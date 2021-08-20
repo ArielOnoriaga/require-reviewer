@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  reviewer_required:
+    runs-on: ubuntu-latest
+    name: Check if reviewer are required
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: 'Checking files'
+        uses: ./
+        with:
+          files: 'this is a test'

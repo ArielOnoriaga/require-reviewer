@@ -1,10 +1,10 @@
-name: 'Require Reviewer'
-description: 'Require reviewer if any specific file is modified'
+name: 'Require reviewer'
+description: 'Require reviewer when specific files are modified'
 author: 'Ariel Onoriaga'
 
 inputs:
-  FILES:
-    description: 'filepaths'
+  files:
+    description: 'paths of files to eval'
     required: true
 
 runs:
