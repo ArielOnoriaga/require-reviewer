@@ -6319,6 +6319,7 @@ const github = __nccwpck_require__(438);
 try {
   const filePaths = core.getInput('file-paths');
 
+  console.log(filePaths);
 } catch (error) {
   core.setFailed(error.message);
 }
